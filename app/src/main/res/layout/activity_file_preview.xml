@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#070B11"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#0B1118">
+
+        <TextView
+            android:id="@+id/preview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#F4F8FC"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/preview_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="#7F93A7"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/preview_select_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:buttonTint="#54F0A3"
+            android:text="Select this file"
+            android:textColor="#54F0A3"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/preview_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:adjustViewBounds="true"
+                    android:background="#0F1620"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/preview_video_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0F1620"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:id="@+id/preview_video_frame"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:background="#000000">
+
+                        <TextureView
+                            android:id="@+id/preview_video_texture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/preview_video_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Loading video..."
+                        android:textColor="#A2B5C8"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:id="@+id/preview_video_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/preview_video_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Play"
+                        android:textAllCaps="false"
+                        android:textColor="#071016"
+                        android:textStyle="bold"
+                        app:backgroundTint="#7CD8FF"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/preview_audio_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#0F1620"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/preview_audio_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#F4F8FC"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/preview_audio_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ready to play"
+                        android:textColor="#A2B5C8"
+                        android:textSize="12sp" />
+
+                    <SeekBar
+                        android:id="@+id/preview_audio_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/preview_audio_play_pause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Play"
+                        android:textAllCaps="false"
+                        android:textColor="#071016"
+                        android:textStyle="bold"
+                        app:backgroundTint="#54F0A3"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/preview_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:background="#0F1620"
+                    android:padding="14dp"
+                    android:textColor="#D5E0EB"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/preview_pdf_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="420dp"
+                    android:adjustViewBounds="true"
+                    android:background="#0F1620"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/preview_icon"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:src="@android:drawable/ic_menu_save"
+                    android:visibility="gone"
+                    app:tint="#79C7FF" />
+
+                <TextView
+                    android:id="@+id/preview_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:textColor="#A2B5C8"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:background="#0B1118">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/preview_open_external"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Open With Another App"
+            android:textAllCaps="false"
+            android:textColor="#DCE7F2"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="#111A24"
+            app:cornerRadius="14dp"
+            app:strokeColor="#233446"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/preview_done"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="#06120C"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#54F0A3"
+            app:cornerRadius="16dp" />
+    </LinearLayout>
+
+</LinearLayout>

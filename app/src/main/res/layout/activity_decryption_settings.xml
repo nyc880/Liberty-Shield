@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_decryption_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Decryption Settings"
+        android:textColor="#FF3D00"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_decrypt_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter Password"
+        android:textColorHint="@color/hint_color_selector"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/password_box_stroke"
+        app:boxStrokeWidth="2.5dp"
+        app:boxStrokeWidthFocused="2.5dp"
+        app:hintTextColor="@color/hint_color_selector"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#FF9800">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#FF9800"
+            android:textColorHint="#FF9800"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_second_decrypt_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Second password if you have"
+        android:textColorHint="@color/second_password_hint_color_selector"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/second_password_box_stroke"
+        app:boxStrokeWidth="2.5dp"
+        app:boxStrokeWidthFocused="2.5dp"
+        app:hintTextColor="@color/second_password_hint_color_selector"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/second_password_hint_color_selector">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/second_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#CE93D8"
+            android:textColorHint="#CE93D8"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_start_decrypt"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:text="Start Decryption"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FF3D00"
+        app:cornerRadius="10dp"
+        app:strokeColor="#FF7043"
+        app:strokeWidth="1dp" />
+
+</LinearLayout>
