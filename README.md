@@ -36,6 +36,7 @@ Look at the image below to see the difference in technical approach and security
 * Government-Level Secure Wipe: In compliance with strict NIST standards, rendering the recovery of deleted files impossible, even in forensic laboratories[cite: 5].
 * Instant Memory Cleansing (RAM Zeroization): Immediate purging and destruction of any passwords or sensitive structures from RAM to prevent key leakage in the event of device seizure[cite: 4].
 * 100% Offline Architecture (Zero-Knowledge): No backdoors, no internet connection required (No Internet Permission), and zero cloud dependency[cite: 4].
+* Secure Text Encryption: A dedicated, high-entropy module for sensitive notes, utilizing AES-256-GCM standards, secure clipboard management, and tamper-proof PDF export.
 
 ## Documentation & Quick Links
 * **User Guide:** For step-by-step instructions on encryption modes (Just Files, Just Zip, Double Zip), advanced parameters, and safe RAM extraction, please refer to the [USAGE.md](USAGE.md) file.
@@ -45,3 +46,8 @@ Look at the image below to see the difference in technical approach and security
 This software is released as a Source-Available project. Access to the source code is provided solely for transparency, proof of the absence of backdoors, and security auditing for users. Any copying, modification, reverse engineering, re-skinning, or redistribution without the explicit written permission of the developer is strictly prohibited by law and subject to legal prosecution. All legal terms are reserved in the [LICENSE.txt](LICENSE.txt) file.
 
 *Disclaimer: This tool is provided "AS IS". The developer assumes zero liability for any consequences or alternative usages, and 100% of the legal responsibility rests entirely with the user.*
+
+
+
+Contact & Security Reporting
+For inquiries, security auditing reports, official correspondence, collaboration, or any other matter, please feel free to reach out to the developer via the email below: [liberty88intell@gmail.com]
